@@ -1,1 +1,1 @@
-# docker-simple-webapp-flask
+# Simple Web Application (docker/flask)
