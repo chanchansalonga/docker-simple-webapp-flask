@@ -26,13 +26,12 @@ FLASK_APP=/opt/app.py flask run --host=0.0.0.0 --port 8080
 
 4. Test
 Open a browser and go to URL
-```
 if run inside virtual machine
+```
 http://<IP>:8080                            => Welcome
 http://<IP>:8080/how%20are%20you            => I am good, how about you?
 ```
-
-```
 if run in Docker Desktop
+```
 localhost:8080
 ```
