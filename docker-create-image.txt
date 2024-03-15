@@ -1,0 +1,33 @@
+# creating a directory for simple-webapp-flask
+mkdir simple-webapp-flask
+
+# Create a Dockerfile
+cat > Dockerfile
+  FROM ubuntu
+  RUN apt-get update && apt-get install -y python3 python3-pip
+  RUN pip install flask
+  COPY app.py /opt/app.py
+  ENTRYPOINT FLASK_APP=/opt/app.py flask run --host=0.0.0.0 --port=8080
+
+# Creating or copy app.py
+cat > /opt/app.py
+  import os
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def main():
+    return "Welcome!"
+
+@app.route('/how are you')
+def hello():
+    return 'I am good, how about you?'
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
+
+# building the image
+docker build . -t chanchansalonga/simople-webapp-flask
+
+# pushing it into dockerhub
+docker push chanchansalonga/simple-webapp-flask
