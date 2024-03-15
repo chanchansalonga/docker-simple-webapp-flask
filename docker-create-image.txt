@@ -31,3 +31,7 @@ docker build . -t chanchansalonga/simople-webapp-flask
 
 # pushing it into dockerhub
 docker push chanchansalonga/simple-webapp-flask
+
+
+#IMAGE CREATED
+https://hub.docker.com/repository/docker/chanchansalonga/simple-webapp-flask/general
