@@ -1,7 +1,7 @@
 # TESTING BEFORE CREATING THE IMAGE #
 
 # run ubuntu image
-docker run ubuntu
+docker run -it ubuntu bash
   
 # install dependencies
 apt-get update && install -y python3 python3-pip
